@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="pt=br">
+<head>
+    <meta charset = "UTF-8">
+    <title> IMC </title>
+</head>
+<body>
+<p>Cálculo do IMC</p>
+<form action="/" method='POST'>
+    Peso (kg):
+    <input type= "text" name= "peso"><br>
+    Altura (cm):
+    <input type= "text" name = "altura"><br>
+    <button type= "submit" value="submit">  submit</button>
+</form>
+<p>Seu IMC é: {{imc}} </p>
+<p>Faixas de classificação do IMC:</p>
+{% if imc == 0 %}
+<p>  </p>
+{% elif imc < 18.5 %}
+<p> Magreza </p>
+{% elif 18.5 < imc <= 24.9 %}
+<p> Saudével </p>
+{% elif 24.9 < imc <= 29.9 %}
+<p> Sobrepeso </p>
+{% else %}
+<p> Obesidade </p>
+{% endif %}
+
+</body>
+
+</html
